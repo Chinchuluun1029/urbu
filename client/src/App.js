@@ -67,7 +67,7 @@ class App extends Component {
     parseInt(idTodelete);
     let objIdToDelete = null;
     this.state.data.forEach((dat) => {
-      if (dat.id === idTodelete) {
+      if (dat.id === parseInt(idTodelete)) {
         objIdToDelete = dat._id;
       }
     });
@@ -85,7 +85,7 @@ class App extends Component {
     let objIdToUpdate = null;
     parseInt(idToUpdate);
     this.state.data.forEach((dat) => {
-      if (dat.id === idToUpdate) {
+      if (dat.id === parseInt(idToUpdate)) {
         objIdToUpdate = dat._id;
       }
     });
@@ -103,6 +103,7 @@ class App extends Component {
     const { data } = this.state;
     return (
       <div>
+        <h1>Hello World</h1>
         <ul>
           {data.length <= 0
             ? 'NO DB ENTRIES YET'
